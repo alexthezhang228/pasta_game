@@ -1,0 +1,109 @@
+
+body{
+  margin: 10px;
+}
+.body_blur {
+  background-size: cover;
+  filter: blur(5px); 
+}
+#board{
+  height: 532px;
+  width: 475px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card{
+  height: 128px;
+  width: 110px;
+  margin:2.5px;
+}
+
+#title{
+  color: blueviolet;
+  float: left;
+  position: relative;
+  top: 200px;
+  left: 80px;
+}
+.hidden{
+  display: none;
+}
+
+.first{
+  position: absolute;
+  top: 20%; 
+  left: -300px; 
+  transform: translate(-15%, -15%); /* 将元素水平和垂直居中 */
+  animation: slideIn 1s ease-in-out forwards; 
+  animation-delay: 3s;
+  display: block;
+}
+
+.second{
+  position: absolute;
+  top: 30%; 
+  left: -450px; 
+  transform: translate(-25%, -25%); /* 将元素水平和垂直居中 */
+  animation: slideIn 2s ease-in-out forwards; 
+  animation-delay: 10s;
+  display: block;
+}
+.third{
+  position: absolute;
+  top: 40%; 
+  left: -500px; 
+  transform: translate(-25%, -25%); /* 将元素水平和垂直居中 */
+  animation: slideIn 2s ease-in-out forwards; 
+  animation-delay: 15s;
+  display: block;
+}
+
+.forth{
+  position: absolute;
+  top: 50%; 
+  left: -600px; 
+  transform: translate(-25%, -25%); /* 将元素水平和垂直居中 */
+  animation: slideIn 2s ease-in-out forwards; 
+  animation-delay: 20s;
+  display: block;
+}
+
+
+@keyframes slideIn {
+  0% {
+    left: -300px; /* 开始位置在屏幕外 */
+  }
+  100% {
+    left: 20%; /* 移动到屏幕中间 */
+    transform: translate(-50%, -50%); /* 将元素水平和垂直居中 */
+  }
+}
+
+.show_break {
+  position: fixed;
+  top: 0;
+  left: 100%; /* Start from outside the screen */
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Make sure it's on top */
+  animation: slideInAndExpand 3s ease-in-out forwards;
+  display: block;
+  animation-delay: 25s;
+}
+
+@keyframes slideInAndExpand {
+  0% {
+    left: 100%; /* Start from outside the screen */
+    transform: scale(0);
+  }
+  100% {
+    left: 0;
+    transform: scale(1);
+  }
+}
+
+
+
+
